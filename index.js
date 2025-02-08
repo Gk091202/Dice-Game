@@ -1,22 +1,19 @@
-window.onload = function () {
-    document.getElementById("rollButton").addEventListener("click", rollDice);
-};
+document.getElementById("rollButton").addEventListener("click", rollDice);
 
 function rollDice() {
     var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-    var randomImageSource1 = "dice" + randomNumber1 + ".png"; // dice1.png - dice6.png
-    document.querySelector(".img1").setAttribute("src", randomImageSource1);
-
     var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-    var randomImageSource2 = "dice" + randomNumber2 + ".png";
-    document.querySelector(".img2").setAttribute("src", randomImageSource2);
 
-    // Update the winner text
+    document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
+    document.querySelector(".img2").setAttribute("src", "dice" + randomNumber2 + ".png");
+
+    let winnerText = document.getElementById("winnerText");
+    
     if (randomNumber1 > randomNumber2) {
-        document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
+        winnerText.innerHTML = "🚩 Player 1 Wins!";
     } else if (randomNumber2 > randomNumber1) {
-        document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+        winnerText.innerHTML = "Player 2 Wins! 🚩";
     } else {
-        document.querySelector("h1").innerHTML = "It's a Draw!";
+        winnerText.innerHTML = "It's a Draw!";
     }
 }
