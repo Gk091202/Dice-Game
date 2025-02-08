@@ -1,41 +1,64 @@
+/* Center elements */
 .container {
-  width: 70%;
-  margin: auto;
-  text-align: center;
+    text-align: center;
 }
 
-.dice {
-  text-align: center;
-  display: inline-block;
-
+/* Dice Images */
+.dice-img {
+    width: 100px; 
+    height: 100px;
 }
 
-body {
-  background-color: #393E46;
+/* Dice-Shaped Button */
+.dice-button {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff4757;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.3s;
+    cursor: pointer;
 }
 
-h1 {
-  margin: 30px;
-  font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
-  font-size: 8rem;
-  color: #4ECCA3;
+/* Dice Button Hover Effect */
+.dice-button:hover {
+    background-color: #ff6b81;
+    transform: scale(1.1);
 }
 
-p {
-  font-size: 2rem;
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
+/* Dice Button Click Effect */
+.dice-button:active {
+    transform: scale(0.9);
 }
 
-img {
-  width: 80%;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dice-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .dice-button {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
 }
 
-footer {
-  margin-top: 5%;
-  color: #EEEEEE;
-  text-align: center;
-  font-family: 'Indie Flower', cursive;
-
+@media (max-width: 480px) {
+    .dice-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .dice-button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 }
