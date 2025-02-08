@@ -9,14 +9,7 @@
     height: 120px;
 }
 
-/* Center button below the dices */
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* Dice-Shaped Button (Increased Size) */
+/* Center button for all screen sizes */
 .dice-button {
     width: 120px;
     height: 120px;
@@ -31,6 +24,11 @@
     transition: transform 0.2s, background-color 0.3s;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure button stays centered */
+.d-flex {
+    display: flex !important;
 }
 
 /* Dice Button Hover Effect */
@@ -53,7 +51,7 @@ footer {
     padding: 10px;
 }
 
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .dice-img {
         width: 100px;
